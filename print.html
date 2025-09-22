@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stamp-Book · Harbour Pools Passport</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    :root{ --ink:#1d2a22; --sub:#5b6e64; }
+    *{box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:var(--ink);margin:0;padding:24px}
+    h1{margin:0 0 8px}
+    .meta{color:var(--sub);margin:0 0 16px}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .card{border:2px dashed #cde9db;border-radius:12px;padding:12px;min-height:120px}
+    .row{display:flex;justify-content:space-between;align-items:center}
+    .name{font-weight:700}
+    .box{width:36px;height:36px;border:2px solid #1f8f64;border-radius:6px}
+    @media print{ body{padding:0} .pagebreak{break-after:page} }
+  </style>
+</head>
+<body>
+  <h1>Harbour Pools Passport — Stamp‑Book</h1>
+  <p class="meta">Wanderlusters & Dabblers Society • Print and tick or stamp as you go</p>
+  <div id="grid" class="grid"></div>
+  <script>
+    fetch('pools.json').then(r=>r.json()).then(pools=>{
+      const g = document.getElementById('grid');
+      pools.forEach(p=>{
+        const d = document.createElement('div');
+        d.className='card';
+        d.innerHTML = `<div class="row"><div class="name">${p.name}</div><div class="box"></div></div>
+                       <div class="row" style="margin-top:6px"><div>${p.suburb} • ${p.area}</div><div style="color:#5b6e64">${p.type}</div></div>`;
+        g.appendChild(d);
+      });
+    });
+  </script>
+</body>
+</html>

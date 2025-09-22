@@ -1,0 +1,134 @@
+[
+  {
+    "id": "andrew-boy-charlton",
+    "name": "Andrew (Boy) Charlton Pool",
+    "suburb": "The Domain / Woolloomooloo",
+    "type": "harbour lap pool",
+    "area": "Harbour",
+    "notes": "Seasonal outdoor saltwater pool on Woolloomooloo Bay.",
+    "img": "andrew-boy-charlton.png",
+    "lat": -33.8685,
+    "lng": 151.2222
+  },
+  {
+    "id": "north-sydney-olympic",
+    "name": "North Sydney Olympic Pool",
+    "suburb": "Milsons Point",
+    "type": "harbour lap pool",
+    "area": "Harbour",
+    "notes": "Iconic pool beside the Harbour Bridge.",
+    "img": "north-sydney-olympic.png",
+    "lat": -33.8475,
+    "lng": 151.2115
+  },
+  {
+    "id": "maccallum",
+    "name": "Maccallum Seawater Pool",
+    "suburb": "Cremorne Point",
+    "type": "tidal harbour pool",
+    "area": "Harbour",
+    "notes": "Historic harbourside pool with timber deck.",
+    "img": "maccallum.png",
+    "lat": -33.8426,
+    "lng": 151.2253
+  },
+  {
+    "id": "murray-rose-redleaf",
+    "name": "Murray Rose Pool (Redleaf)",
+    "suburb": "Double Bay",
+    "type": "harbour baths (netted)",
+    "area": "Harbour",
+    "notes": "Pontoon and boardwalks; great for laps and lounging.",
+    "img": "murray-rose-redleaf.png",
+    "lat": -33.8756,
+    "lng": 151.2452
+  },
+  {
+    "id": "dawn-fraser-baths",
+    "name": "Dawn Fraser Baths",
+    "suburb": "Balmain",
+    "type": "harbour baths (netted)",
+    "area": "Harbour",
+    "notes": "Australia\u2019s oldest public harbour baths.",
+    "img": "dawn-fraser-baths.png",
+    "lat": -33.8566,
+    "lng": 151.1657
+  },
+  {
+    "id": "greenwich-baths",
+    "name": "Greenwich Baths",
+    "suburb": "Greenwich",
+    "type": "harbour baths (netted)",
+    "area": "Harbour",
+    "notes": "Netted beach with kiosk; fees may apply.",
+    "img": "greenwich-baths.png",
+    "lat": -33.8326,
+    "lng": 151.1815
+  },
+  {
+    "id": "balmoral-baths",
+    "name": "Balmoral Baths",
+    "suburb": "Balmoral",
+    "type": "harbour baths (netted)",
+    "area": "Middle Harbour",
+    "notes": "Boardwalks and nets in Middle Harbour.",
+    "img": "balmoral-baths.png",
+    "lat": -33.8256,
+    "lng": 151.2547
+  },
+  {
+    "id": "northbridge-baths",
+    "name": "Northbridge Baths",
+    "suburb": "Northbridge",
+    "type": "harbour baths (netted)",
+    "area": "Middle Harbour",
+    "notes": "Tidal baths; no lane ropes.",
+    "img": "northbridge-baths.png",
+    "lat": -33.8067,
+    "lng": 151.2143
+  },
+  {
+    "id": "little-manly-baths",
+    "name": "Little Manly Cove Baths",
+    "suburb": "Manly",
+    "type": "harbour baths (netted)",
+    "area": "Harbour",
+    "notes": "Calm cove swimming with nets; family-friendly.",
+    "img": "little-manly-baths.png",
+    "lat": -33.7994,
+    "lng": 151.2934
+  },
+  {
+    "id": "fairlight-pool",
+    "name": "Fairlight Tidal Swimming Pool",
+    "suburb": "Fairlight",
+    "type": "tidal harbour pool",
+    "area": "Harbour",
+    "notes": "Tidal rock pool within the harbour.",
+    "img": "fairlight-pool.png",
+    "lat": -33.7985,
+    "lng": 151.2794
+  },
+  {
+    "id": "watsons-bay-baths",
+    "name": "Watsons Bay Baths",
+    "suburb": "Watsons Bay",
+    "type": "harbour baths (netted)",
+    "area": "Harbour",
+    "notes": "Timber boardwalk, harbour views.",
+    "img": "watsons-bay-baths.png",
+    "lat": -33.8439,
+    "lng": 151.2825
+  },
+  {
+    "id": "clontarf-baths",
+    "name": "Clontarf Baths",
+    "suburb": "Clontarf",
+    "type": "harbour baths (netted)",
+    "area": "Middle Harbour",
+    "notes": "Netted enclosure by Clontarf Reserve.",
+    "img": "clontarf-baths.png",
+    "lat": -33.8025,
+    "lng": 151.2487
+  }
+]

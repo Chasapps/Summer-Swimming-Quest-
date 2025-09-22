@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wanderlusters & Dabblers · Harbour Pools Passport (Members)</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <!-- Leaflet CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <img class="brandmark" src="brand/logo-128.png" alt="Wanderlusters & Dabblers Society">
+      <div class="titles">
+        <h1>Harbour Pools Passport</h1>
+        <p class="subtitle">Wanderlusters &amp; Dabblers Society – Members Edition</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="card controls">
+      <div class="row">
+        <div class="progress-wrap">
+          <div id="progressLabel">0 / 0 visited</div>
+          <div class="progress"><div id="progressBar" class="bar" style="width:0%"></div></div>
+        </div>
+        <div class="actions">
+          <button id="openMapBtn" class="alt">Map view</button>
+          <a class="secondary" href="print.html" target="_blank" style="text-decoration:none;padding:10px 14px;border-radius:10px;color:#fff">Printable stamp-book</a>
+          <button id="exportBtn" class="secondary">Export progress</button>
+          <button id="importBtn" class="secondary">Import progress</button>
+          <input type="file" id="importFile" accept=".json,application/json" style="display:none">
+          <button id="printBtn">Print passport</button>
+          <button id="makeCardBtn">Share completion card</button>
+          <button id="resetBtn" class="danger small">Reset</button>
+        </div>
+      </div>
+      <div class="row filters">
+        <input id="searchBox" type="search" placeholder="Search name or suburb…" />
+        <select id="typeFilter">
+          <option value="">All types</option>
+          <option value="harbour lap pool">Harbour lap pools</option>
+          <option value="harbour baths (netted)">Harbour baths (netted)</option>
+          <option value="tidal harbour pool">Tidal harbour pools</option>
+        </select>
+        <select id="areaFilter">
+          <option value="">All areas</option>
+          <option value="Harbour">Harbour</option>
+          <option value="Middle Harbour">Middle Harbour</option>
+        </select>
+      </div>
+      <div class="tab-row">
+        <span class="muted small">Tip: use Map view to mark visits from pins.</span>
+      </div>
+    </section>
+
+    <section class="card" id="badgesCard">
+      <h2>Badges</h2>
+      <div id="badges" class="badges"></div>
+      <p class="muted small">Badges unlock automatically when you complete an area.</p>
+    </section>
+
+    <section id="mapCard" class="card">
+      <h2>Map</h2>
+      <div id="map"></div>
+    </section>
+
+    <section id="grid" class="grid"></section>
+
+    <footer class="muted">
+      <p>© Wanderlusters & Dabblers Society</p>
+    </footer>
+  </main>
+
+  <template id="cardTpl">
+    <article class="pool card">
+      <img class="thumb" alt="" />
+      <div class="card-body">
+        <div class="card-head">
+          <label class="check">
+            <input type="checkbox" class="visitBox" />
+            <span class="tick"></span>
+          </label>
+          <h3 class="name"></h3><button class="tiny map-jump">Map</button>
+        </div>
+        <div class="meta">
+          <span class="pill pill-type"></span>
+          <span class="dot">•</span>
+          <span class="suburb"></span>
+          <span class="dot">•</span>
+          <span class="area"></span>
+        </div>
+        <p class="notes"></p>
+        <div class="extras">
+          <label>Date: <input type="date" class="visitDate"></label>
+          <label>Rating:
+            <select class="rating">
+              <option value="">—</option>
+              <option>★☆☆☆☆</option>
+              <option>★★☆☆☆</option>
+              <option>★★★☆☆</option>
+              <option>★★★★☆</option>
+              <option>★★★★★</option>
+            </select>
+          </label>
+          <label>Notes: <input type="text" class="userNotes" placeholder="e.g., tide time, jellyfish, kiosk" /></label>
+<label>Nearby café: <input type="text" class="cafeNotes" placeholder="name, coffee notes, chips score…" /></label>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <dialog id="lightbox"><img id="lightboxImg" alt="" /></dialog>
+  <a id="dlLink" style="display:none"></a>
+
+  <script>const LS_KEY = "harbour_pools_passport_v4_members";</script>
+  <script src="script.js"></script>
+</body>
+</html>
